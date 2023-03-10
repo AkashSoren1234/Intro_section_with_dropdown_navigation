@@ -1,6 +1,6 @@
 # Frontend Mentor - Intro section with dropdown navigation solution
 
-This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -11,7 +11,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-
 
 ## Overview
 
@@ -31,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/AkashSoren1234/Intro_section_with_dropdown_navigation](https://github.com/AkashSoren1234/Intro_section_with_dropdown_navigation)
+- Live Site URL: [https://akashsoren1234.github.io/Intro_section_with_dropdown_navigation/](https://akashsoren1234.github.io/Intro_section_with_dropdown_navigation/)
 
 ## My process
 
@@ -47,5 +46,3 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@AkashSoren1234](https://www.frontendmentor.io/profile/AkashSoren1234)
-
-
