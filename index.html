@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <main id="main">
+      <div class="overlay" id="overlay"></div>
+      <nav>
+        <div class="nav_logo_menu_bar" onClick="openSlideMenu()">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="" />
+          </div>
+          <div class="menu_bar">
+            <img src="./images/icon-menu.svg" alt="open_menu" />
+          </div>
+        </div>
+
+        <div class="nav_menu" id="nav_menu">
+          <div class="close_menu_icon" onClick="closeSlideMenu()">
+            <img src="./images/icon-close-menu.svg" alt="close_menu" />
+          </div>
+
+          <div class="nav_menu_item_container">
+            <div
+              class="features nav_item"
+              onclick="toggleDropdown('features_expanded_list');"
+              tabindex=""
+            >
+              <p>Features</p>
+              <div class="arrow_img"></div>
+            </div>
+            <div class="features_expanded_list" id="features_expanded_list">
+              <div class="features_item_container">
+                <img
+                  src="./images/icon-todo.svg"
+                  alt=""
+                  class="features_item_icon"
+                />
+                <p class="features_item">Todo List</p>
+              </div>
+              <div class="features_item_container">
+                <img
+                  src="./images/icon-calendar.svg"
+                  alt=""
+                  class="features_item_icon"
+                />
+                <p class="features_item">Calender</p>
+              </div>
+              <div class="features_item_container">
+                <img
+                  src="./images/icon-reminders.svg"
+                  alt=""
+                  class="features_item_icon"
+                />
+                <p class="features_item">Remainders</p>
+              </div>
+              <div class="features_item_container">
+                <img
+                  src="./images/icon-planning.svg"
+                  alt=""
+                  class="features_item_icon"
+                />
+                <p class="features_item">Planning</p>
+              </div>
+            </div>
+
+            <div
+              class="company nav_item"
+              onclick="toggleDropdown('company_expanded_list');"
+              tabindex=""
+            >
+              <p>Company</p>
+              <div class="arrow_img"></div>
+            </div>
+            <div class="company_expanded_list" id="company_expanded_list">
+              <p class="company_item">History</p>
+              <p class="company_item">Our Team</p>
+              <p class="company_item">Blog</p>
+            </div>
+
+            <div class="nav_item" tabindex="">
+              <p>Careers</p>
+            </div>
+
+            <div class="nav_item" tabindex="">
+              <p>About</p>
+            </div>
+          </div>
+
+          <div class="login_register_container">
+            <button class="login_btn">Login</button>
+            <button class="register_btn">Register</button>
+          </div>
+        </div>
+      </nav>
+      <div class="grid_container">
+        <div class="illustration"></div>
+        <div class="left_container">
+          <div class="main_content">
+            <h1 class="main_heading"><span>Make</span> remote work</h1>
+            <p class="description">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button class="learn_more_btn">Learn more</button>
+          </div>
+
+          <div class="client_section">
+            <img
+              src="./images/client-databiz.svg"
+              alt=""
+              class="databiz_logo"
+            />
+            <img
+              src="./images/client-audiophile.svg"
+              alt=""
+              class="audiophile_logo"
+            />
+            <img src="./images/client-meet.svg" alt="" class="meet_logo" />
+            <img src="./images/client-maker.svg" alt="" class="maker_logo" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

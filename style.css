@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Neutral */
+  --Almost_White: hsl(0, 0%, 98%);
+  --Medium_Gray: hsl(0, 0%, 41%);
+  --Almost_Black: hsl(0, 0%, 8%);
+}
+
+html {
+  font-size: 100%;
+  /* font-size: 18px; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  min-height: 100vh;
+  background-color: var(--Almost_White);
+  width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main.open {
+  overflow: hidden;
+  position: fixed;
+}
+
+.overlay {
+  transition: all 0.2s ease-out;
+}
+
+.overlay.open {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in;
+}
+
+nav {
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+
+.nav_logo_menu_bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu_bar:hover {
+  cursor: pointer;
+}
+
+.nav_menu {
+  position: fixed;
+  z-index: 2;
+  height: 100vh;
+  background-color: var(--Almost_White);
+  color: var(--Medium_Gray);
+  top: 0;
+  right: 0;
+  width: 0;
+  text-align: left;
+  transition: all 0.3s ease-out;
+}
+
+.nav_menu.open {
+  width: 250px;
+  padding: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.nav_menu .close_menu_icon {
+  text-align: right;
+}
+
+.nav_menu .close_menu_icon:hover {
+  cursor: pointer;
+}
+
+.nav_menu_item_container {
+  padding: 1.5rem 0.5rem 0 0.5rem;
+}
+
+.arrow_img {
+  width: 10px;
+  background-image: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-left: 1rem;
+}
+
+.arrow_img.open {
+  background-image: url("./images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.nav_item {
+  margin-bottom: 1.5rem;
+}
+
+.nav_item:hover {
+  cursor: pointer;
+  color: var(--Almost_Black);
+}
+
+.features_expanded_list,
+.company_expanded_list {
+  overflow-y: hidden;
+  max-height: 0;
+  transition: all 0.25s;
+}
+
+.features_expanded_list.open,
+.company_expanded_list.open {
+  /* overflow-y: auto; */
+  max-height: 200px;
+  transition: all 0.4s;
+  margin: 0.5rem 1.5rem;
+}
+
+.features_item:hover,
+.company_item:hover {
+  cursor: pointer;
+}
+
+.features_item_container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.company_item {
+  margin-bottom: 1.5rem;
+}
+
+.login_register_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_btn,
+.register_btn {
+  background-color: transparent;
+  color: var(--Medium_Gray);
+  padding: 0.8rem 0;
+}
+
+.login_btn:hover,
+.register_btn:hover {
+  cursor: pointer;
+}
+
+.login_btn {
+  border: none;
+}
+
+.register_btn {
+  border-radius: 1rem;
+  border: 2px solid --Medium_Gray;
+}
+
+.illustration {
+  width: 100%;
+  height: 300px;
+  background-image: url("./images/image-hero-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.main_content {
+  padding: 1rem;
+}
+
+.main_content .main_heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.main_content .description {
+  color: var(--Medium_Gray);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.main_content .learn_more_btn {
+  color: var(--Almost_White);
+  background-color: var(--Almost_Black);
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid var(--Almost_Black);
+  border-radius: 1rem;
+  padding: 0.9rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.main_content .learn_more_btn:hover {
+  cursor: pointer;
+  background-color: var(--Almost_White);
+  color: var(--Almost_Black);
+  border: 1px solid var(--Almost_Black);
+  transition: all 0.3ms ease-in-out;
+}
+
+.client_section {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.client_section .databiz_logo {
+  width: 20%;
+}
+
+.client_section .audiophile_logo {
+  width: 15%;
+}
+
+.client_section .meet_logo {
+  width: 18%;
+}
+
+.client_section .maker_logo {
+  width: 20%;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .main_content .description {
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+
+  .overlay {
+    display: none;
+  }
+
+  .main_content .description {
+    padding: 0 10rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    padding: 2rem 3rem;
+  }
+
+  nav .nav_logo_menu_bar {
+    width: fit-content;
+  }
+
+  nav .nav_logo_menu_bar .menu_bar {
+    display: none;
+  }
+
+  nav .nav_menu {
+    width: 100%;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  nav .nav_menu .close_menu_icon {
+    display: none;
+  }
+
+  nav .nav_menu .nav_menu_item_container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    padding-top: 0.2rem;
+    margin-left: 5rem;
+  }
+
+  nav .nav_menu .nav_menu_item_container .arrow-img {
+    background-position: top left;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  nav .nav_menu .nav_menu_item_container .arrow-img.open {
+    background-position: top left;
+  }
+
+  nav .nav_menu .nav_menu_item_container .features_expanded_list {
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 3rem;
+    left: 0;
+    border-radius: 0.5rem;
+    background-color: var(--Almost_White);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0;
+  }
+
+  nav .nav_menu .nav_menu_item_container .features_expanded_list.open {
+    height: 200px;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  nav .nav_menu .nav_menu_item_container .company_expanded_list {
+    overflow-y: hidden;
+    position: absolute;
+    background-color: var(--Almost_White);
+    left: 12.5rem;
+    top: 3rem;
+    border-radius: 0.5rem;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.2s ease-out;
+  }
+
+  nav .nav_menu .nav_menu_item_container .company_expanded_list.open {
+    height: 150px;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    transition: all 0.2s ease-in;
+  }
+
+  nav .nav_menu .nav_menu_item_container .nav_item {
+    margin-right: 2rem;
+  }
+
+  nav .nav_menu .login_register_container {
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: auto;
+  }
+
+  .login_btn,
+  .register_btn {
+    padding: 0.8rem 1.3rem;
+  }
+
+  .grid_container {
+    display: grid;
+    grid-template-columns: 1fr 490px;
+    gap: 8rem;
+    grid-template-areas: "main illustration" "client illustration";
+    margin: 0 7.5rem 0 10.5rem;
+  }
+
+  .illustration {
+    background-image: url("./images/image-hero-desktop.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    grid-row: 1;
+    grid-column: 2;
+    grid-area: illustration;
+    height: 100%;
+  }
+
+  .main_content {
+    grid-area: main;
+    text-align: left;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .main_content .main_heading {
+    font-size: 4.75rem;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .maisn_content .main_heading span {
+    display: block;
+  }
+
+  .main_content .description {
+    max-width: 450px;
+    font-size: 1.1rem;
+    padding: 0;
+    padding-right: 2rem;
+    margin-bottom: 3.5rem;
+  }
+  .main_content .learn_more_btn {
+    font-size: 1.2rem;
+    padding: 1.2rem 2rem;
+    margin-bottom: 6.5rem;
+  }
+
+  .client_section {
+    grid-row: 2;
+    grid-column: 1;
+    grid-area: client;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .client-section .databiz_logo {
+    width: 20%;
+  }
+  .client-section .audiophile_logo {
+    width: 13%;
+  }
+  .client-section .meet_logo {
+    width: 20%;
+  }
+  .client-section .maker_logo {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .client-section .databiz_logo {
+    width: 15%;
+  }
+  .client-section .audiophile_logo {
+    width: 10%;
+  }
+  .client-section .meet_logo {
+    width: 13%;
+  }
+  .client-section .maker_logo {
+    width: 13%;
+  }
+}
